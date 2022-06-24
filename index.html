@@ -4,37 +4,125 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
+  <link rel="stylesheet" href="css/styles.css">
+
+  <script type="text/javascript" src="script.js"></script>  
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
-  <title>Frontend Mentor | FAQ Accordion Card</title>
+  <title>Joshua Watson | FAQ Challenge</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
+
+    @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
   </style>
 </head>
 <body>
-  How many team members can I invite?
-  You can invite up to 2 additional users on the Free plan. There is no limit on 
-  team members for the Premium plan.
 
-  What is the maximum file upload size?
-  No more than 2GB. All files in your account must fit your allotted storage space.
+  <main class="main">
+    <div class="faq-wrapper">
 
-  How do I reset my password?
-  Click “Forgot password” from the login page or “Change password” from your profile page.
-  A reset link will be emailed to you.
+      <div class="faq-column1">
+      <img class="woman-img" src="images/illustration-woman-online-desktop.svg">
+      <svg class="bg-pattern" width="966" height="945" xmlns="http://www.w3.org/2000/svg"><g fill-rule="nonzero" fill="none" opacity=".099"><path d="M468.755 937.353L19.744 671.73c-14.295-8.047-26.548-21.23-12.62-29.878L457.734 381.89c6.754-4.194 17.018-6.946 23.903-2.936l471.265 273.827c14.296 8.308 16.861 31.45 2.619 39.837L527.925 936.933a59.64 59.64 0 01-59.17.42z" fill="#6862E6"/><path d="M468.755 561.353L19.744 295.73c-14.295-8.047-26.548-21.23-12.62-29.878L457.734 5.89c6.754-4.194 17.018-6.946 23.903-2.936l471.265 273.827c14.296 8.308 16.861 31.45 2.619 39.837L527.925 560.933a59.64 59.64 0 01-59.17.42z" stroke="#1E1F36"/><path d="M468.755 636.353L19.744 370.73c-14.295-8.047-26.548-21.23-12.62-29.878L457.734 80.89c6.754-4.194 17.018-6.946 23.903-2.936l471.265 273.827c14.296 8.308 16.861 31.45 2.619 39.837L527.925 635.933a59.64 59.64 0 01-59.17.42z" stroke="#1E1F36"/></g></svg>
+    </div>
 
-  Can I cancel my subscription?
-  Yes! Send us a message and we’ll process your request no questions asked.
+    <div class="faq-column2">
 
-  Do you provide additional support?
-  Chat and email support is available 24/7. Phone lines are open during normal business hours.
+      <div class="heading">
+      <h1 class="header">FAQ</h1>
+    </div>
 
-  <div class="attribution">
+    <div class="accordion-grid">
+    <!--Accordion 1-->
+    <button class="accordion activeacc">How many team members can I invite?
+    <svg id="arrow" width="10" height="7" xmlns="http://www.w3.org/2000/svg"><path d="M1 .799l4 4 4-4" stroke="#F47B56" stroke-width="2" fill="none" fill-rule="evenodd"/></svg>
+    </button>
+      <div class="panel">
+        <p class="panel-text">You can invite up to 2 additional users on the Free plan. There is no limit on team members for the Premium plan.</p>
+      </div>
+
+      <button class="accordion">What is the maximum file upload size?
+        <svg id="arrow2" width="10" height="7" xmlns="http://www.w3.org/2000/svg"><path d="M1 .799l4 4 4-4" stroke="#F47B56" stroke-width="2" fill="none" fill-rule="evenodd"/></svg>
+      </button>
+      <div class="panel">
+        <p class="panel-text">No more than 2GB. All files in your account must fit your allotted storage space.</p>
+      </div>
+
+      <button class="accordion">How do I reset my password?
+        <svg id="arrow3" width="10" height="7" xmlns="http://www.w3.org/2000/svg"><path d="M1 .799l4 4 4-4" stroke="#F47B56" stroke-width="2" fill="none" fill-rule="evenodd"/></svg>
+      </button>
+      <div class="panel">
+        <p class="panel-text">Click “Forgot password” from the login page or “Change password” from your profile page.
+          A reset link will be emailed to you.</p>
+      </div>
+
+      <button class="accordion">Can I cancel my subscription?
+        <svg id="arrow4" width="10" height="7" xmlns="http://www.w3.org/2000/svg"><path d="M1 .799l4 4 4-4" stroke="#F47B56" stroke-width="2" fill="none" fill-rule="evenodd"/></svg>
+      </button>
+      <div class="panel">
+        <p class="panel-text">Yes! Send us a message and we’ll process your request no questions asked..</p>
+      </div>
+
+      <button class="accordion">Do you provide additional support?
+        <svg id="arrow5" width="10" height="7" xmlns="http://www.w3.org/2000/svg"><path d="M1 .799l4 4 4-4" stroke="#F47B56" stroke-width="2" fill="none" fill-rule="evenodd"/></svg>
+      </button>
+      <div class="panel">
+        <p class="panel-text">Chat and email support is available 24/7. Phone lines are open during normal business hours.</p>
+      </div>
+
+    </div>  
+  </div>    
+    </div>
+  </main>
+
+  
+  <script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    var arw = document.getElementById("arrow");
+    var arw2 = document.getElementById("arrow2");
+    var arw3 = document.getElementById("arrow3");
+    var arw4 = document.getElementById("arrow4");
+    var arw5 = document.getElementById("arrow5");
+
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+      arw.style.transform = "none";
+    } else {
+      panel.style.display = "block";
+      arw.style.transform = "rotate(180deg)";
+    }
+  });
+}
+
+  </script>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  <!--<div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="#">Your Name Here</a>.-->
   </div>
 </body>
 </html>
