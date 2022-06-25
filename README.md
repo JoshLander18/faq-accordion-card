@@ -4,8 +4,8 @@ FRONTENT MENTOR CHALLENGE - FAQ Accordions
 Joshua Watson
 
 ### Links
-- Solution URL: (https://www.frontendmentor.io/solutions/faq-accordion-vcfYWTnkrw)
-- Live Site URL: (https://jwdesignsfaq.netlify.app)
+- Solution URL: https://www.frontendmentor.io/solutions/faq-accordion-vcfYWTnkrw
+- Live Site URL: https://jwdesignsfaq.netlify.app
 
 ### Built with
 HTML, CSS, JavaScript
